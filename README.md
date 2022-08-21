@@ -14,8 +14,10 @@ SPENet is an slef-attention module. We empirically find and verify a phenomenon 
 </p>
 
 ## Requirement
-* Python and [PyTorch](http://pytorch.org/)
-
+Python and [PyTorch](http://pytorch.org/).
+  ```
+  pip install -r requirements.txt
+  ```
 ## Usage
   ```
 python run.py --dataset cifar100 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4
