@@ -10,7 +10,7 @@ This repository is the implementation of "SPENet: Self-adaptive Pooling Enhance 
 SPENet is an slef-attention module. We empirically find and verify a phenomenon that the simple linear combination of global max-pooling and global min-pooling can produce pooling strategies that match or exceed the performance of global average pooling. Based on this empirical observation, we propose a simple-yet-effective self-attention module SPENet, which adopts a self-adaptive pooling strategy based on global max-pooling and global min-pooling and a lightweight module for producing the attention map. 
 
 <p align="center">
-  <img src="https://github.com/zhongshsh/SPENet/blob/main/images/arch.png" width="400" height="300">
+  <img src="https://github.com/zhongshsh/SPENet/blob/main/images/arch.png" width="600" height="300">
 </p>
 
 ## Requirement
