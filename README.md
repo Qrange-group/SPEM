@@ -10,36 +10,29 @@ This repository is the implementation of "SPENet: Self-adaptive Pooling Enhance 
 SPENet is an slef-attention module. We empirically find and verify a phenomenon that the simple linear combination of global max-pooling and global min-pooling can produce pooling strategies that match or exceed the performance of global average pooling. Based on this empirical observation, we propose a simple-yet-effective self-attention module SPENet, which adopts a self-adaptive pooling strategy based on global max-pooling and global min-pooling and a lightweight module for producing the attention map. 
 
 <p align="center">
-  <img src="https://github.com/gbup-group/IEBN/blob/master/figures/iebn.jpg" width="400" height="300">
+  <img src="https://github.com/zhongshsh/SPENet/blob/main/images/arch.png" width="400" height="300">
 </p>
 
 ## Requirement
-* Python 3.6 and [PyTorch 1.0](http://pytorch.org/)
+* Python and [PyTorch](http://pytorch.org/)
 
 ## Usage
   ```
-python cifar.py -a iebn_resnet --dataset cifar100 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4 --checkpoint checkpoints/cifar100/resnet-164-iebn
+python run.py --dataset cifar100 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4
   ```
 
 ## Results
-|                 | original |  IEBN  |
-|:---------------:|:--------:|:------:|
-|    ResNet164    |   74.29  |  77.09 |
+|                 |  Dataset  | original |  IEBN  |
+|:---------------:|:------:|:--------:|:------:|
+|    ResNet164    |CIFAR10 |   93.39  |  94.80 |
+|    ResNet164    |CIFAR100|   74.30  |  76.31 |
 
 
-**Notes:**
-- Training on 2 GPUs
 
-## Citing IEBN
+## Citing SPENet
 
 ```
-@inproceedings{liang2020instance,
-  title={Instance Enhancement Batch Normalization: An Adaptive Regulator of Batch Noise.},
-  author={Liang, Senwei and Huang, Zhongzhan and Liang, Mingfu and Yang, Haizhao},
-  booktitle={AAAI},
-  pages={4819--4827},
-  year={2020}
-}
+???
 ```
 
 ## Acknowledgments

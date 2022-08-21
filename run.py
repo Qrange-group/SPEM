@@ -376,6 +376,7 @@ def train(trainloader, model, criterion, optimizer, epoch, use_cuda):
         # compute output
         outputs, pm = model(inputs)
         loss = criterion(outputs, targets)
+        print(pm)
         pm_loss += pm.item() * inputs.size(0)
         classification_loss += loss.item() * inputs.size(0)
         count += inputs.size(0)
