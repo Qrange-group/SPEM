@@ -31,7 +31,9 @@ model_names = sorted(
 
 parser = argparse.ArgumentParser(description="PyTorch CIFAR10/100 Training")
 # Datasets
-parser.add_argument("-d", "--dataset", default="cifar10", choices=["cifar10", "cifar100"], type=str)
+parser.add_argument(
+    "-d", "--dataset", default="cifar10", choices=["cifar10", "cifar100"], type=str
+)
 parser.add_argument(
     "-j",
     "--workers",
@@ -197,9 +199,7 @@ def main():
     global best_acc
     start_epoch = args.start_epoch  # start from epoch 0 or last checkpoint epoch
 
-    args.checkpoint = (
-        args.checkpoint + "/" + args.dataset + "/" + args.info
-    )
+    args.checkpoint = args.checkpoint + "/" + args.dataset + "/" + args.info
     if not os.path.isdir(args.checkpoint):
         mkdir_p(args.checkpoint)
 
@@ -243,7 +243,7 @@ def main():
 
     # Model
     print("==> creating model '{}'".format(args.arch))
-    
+
     if args.arch.endswith("spenet"):
         model = models.__dict__[args.arch](
             num_classes=num_classes,
