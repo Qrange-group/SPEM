@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/gbup-group/DIANet.svg)
 ![GitHub](https://img.shields.io/badge/Qrange%20-group-orange)
 
-This repository is the implementation of "SPEM: Self-adaptive Pooling Enhanced Attention Module for Image Recognition" [[paper]](https://arxiv.org/abs/?)  on CIFAR-100 and CIFAR-10 datasets. Our paper has been accepted for presentation at ???. You can also check with the [??? proceeding version](???).
+This repository is the implementation of "SPEM: Self-adaptive Pooling Enhanced Attention Module for Image Recognition" [[paper]](https://arxiv.org/abs/2208.10322)  on CIFAR-100 and CIFAR-10 datasets. Our paper has been accepted for presentation at ???. You can also check with the [proceeding version](https://link.springer.com/chapter/10.1007/978-3-031-27818-1_4).
 
 ## Introduction
 
@@ -15,13 +15,13 @@ SPEM is a self-attention module. We empirically find and verify a phenomenon tha
 
 ## Requirement
 Python and [PyTorch](http://pytorch.org/).
-  ```
-  pip install -r requirements.txt
-  ```
+```
+pip install -r requirements.txt
+```
 ## Usage
-  ```
-python run.py --dataset cifar100 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4
-  ```
+```
+CUDA_VISIBLE_DEVICES=0 python run.py --dataset cifar10 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4
+```
 
 ## Results
 |                 |  Dataset  | original |  SPEM  |
@@ -34,7 +34,14 @@ python run.py --dataset cifar100 --block-name bottleneck --depth 164 --epochs 16
 ## Citing SPEM
 
 ```
-???
+@inproceedings{zhong2023spem,
+  title={SPEM: Self-adaptive Pooling Enhanced Attention Module for Image Recognition},
+  author={Zhong, Shanshan and Wen, Wushao and Qin, Jinghui},
+  booktitle={MultiMedia Modeling: 29th International Conference, MMM 2023, Bergen, Norway, January 9--12, 2023, Proceedings, Part II},
+  pages={41--53},
+  year={2023},
+  organization={Springer}
+}
 ```
 
 ## Acknowledgments

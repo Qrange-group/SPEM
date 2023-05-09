@@ -123,9 +123,9 @@ parser.add_argument(
     "--arch",
     "-a",
     metavar="ARCH",
-    default="spenet",
+    default="spem",
     choices=model_names,
-    help="model architecture: " + " | ".join(model_names) + " (default: spenet)",
+    help="model architecture: " + " | ".join(model_names) + " (default: spem)",
 )
 parser.add_argument("--depth", type=int, default=29, help="Model depth.")
 parser.add_argument(
@@ -244,7 +244,7 @@ def main():
     # Model
     print("==> creating model '{}'".format(args.arch))
 
-    if args.arch.endswith("spenet"):
+    if args.arch.endswith("spem"):
         model = models.__dict__[args.arch](
             num_classes=num_classes,
             depth=args.depth,

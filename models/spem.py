@@ -1,19 +1,11 @@
 from __future__ import absolute_import
-
-"""Resnet for cifar dataset.
-Ported form
-https://github.com/facebook/fb.resnet.torch
-and
-https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
-(c) YANG, Wei
-"""
 import torch
 import torch.nn as nn
 from torch.nn.parameter import Parameter
 import math
 
 
-__all__ = ["spenet"]
+__all__ = ["spem"]
 
 
 def conv3x3(in_planes, out_planes, stride=1):
@@ -126,9 +118,9 @@ class Bottleneck(nn.Module):
         return (out, torch.pow(self.p, 2).sum() + pm_sum)
 
 
-class SPENet(nn.Module):
+class SPEM(nn.Module):
     def __init__(self, depth, num_classes=1000, block_name="BasicBlock", info="normal"):
-        super(SPENet, self).__init__()
+        super(SPEM, self).__init__()
         # Model type specifies number of layers for CIFAR-10 model
         if block_name.lower() == "basicblock":
             assert (
@@ -200,8 +192,8 @@ class SPENet(nn.Module):
         return x, pm
 
 
-def spenet(**kwargs):
+def spem(**kwargs):
     """
     Constructs a ResNet model.
     """
-    return SPENet(**kwargs)
+    return SPEM(**kwargs)
