@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/gbup-group/DIANet.svg)
 ![GitHub](https://img.shields.io/badge/Qrange%20-group-orange)
 
-This repository is the implementation of "SPEM: Self-adaptive Pooling Enhanced Attention Module for Image Recognition" [[paper]](https://arxiv.org/abs/2208.10322)  on CIFAR-100 and CIFAR-10 datasets. Our paper has been accepted for presentation at ???. You can also check with the [proceeding version](https://link.springer.com/chapter/10.1007/978-3-031-27818-1_4).
+This repository is the implementation of "SPEM: Self-adaptive Pooling Enhanced Attention Module for Image Recognition" [[paper]](https://arxiv.org/abs/2208.10322) on CIFAR-100 and CIFAR-10 datasets. Our paper has been accepted for presentation at MMM 2023. You can also check with the [proceeding version](https://link.springer.com/chapter/10.1007/978-3-031-27818-1_4).
 
 ## Introduction
 
